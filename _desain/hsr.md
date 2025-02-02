@@ -1,0 +1,8 @@
+- **Firefly**
+  - Speed => 165 (151) 
+- **HMC**
+  - Upgrade Ligtcone
+  - Kurang Speed (-19%)
+  - Kurang HP
+  - Perbaiki Planar
+- 
