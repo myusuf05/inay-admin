@@ -323,11 +323,12 @@ class SantriController extends Controller
             'santri.id_santri as status_santri',
             'ibu.id_gaji as ibu_gaji',
             'ayah.id_gaji as ayah_gaji',
-            'santri.id_kelas as santri_kelas',
+            'kelas.kelas as santri_kelas',
             'santri.id_kamar as santri_kamar'
         ])
             ->leftJoin('orang_tua as ayah', 'santri.id_ayah', '=', 'ayah.id_ortu')
             ->leftJoin('orang_tua as ibu', 'santri.id_ibu', '=', 'ibu.id_ortu')
+            ->leftJoin('kelas', 'santri.id_kelas', '=', 'kelas.id_kelas')
             ->where('santri.id_santri', '=', $id);
 
         if ($db_santri == null) {

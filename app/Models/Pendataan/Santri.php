@@ -25,6 +25,7 @@ class Santri extends Model
         'id_alamat',
         'id_kelas',
         'id_kamar',
+        'id_jadwal',
         'nama',
         'tgl_lahir',
         'jns_kelamin',
@@ -47,10 +48,10 @@ class Santri extends Model
     {
         return $this->hasMany(Jadwal::class, 'santri_id');
     }
-    // public function kelas(): HasOne
-    // {
-    //   return $this->hasOne(Kelas::class);
-    // }
+    public function kelas(): HasOne
+    {
+        return $this->hasOne(Kelas::class);
+    }
 
     // public function kamar(): HasOne 
     // {
